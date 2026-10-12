@@ -1,3 +1,6 @@
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/862dccae-f3c6-4fa1-b78d-504364d51015" />
+
+
 # SKYGUARD
 My project is to develop a swarm of VTOL drones capable of searching large areas and helping rescue teams find people in danger. Each drone will send live video and its position to a central control station, giving rescuers a better view of the situation.
 
