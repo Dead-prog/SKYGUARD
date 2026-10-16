@@ -8,11 +8,11 @@ void setup() {
 
 void loop() {
   gear_1();
-  delay(1000);
+  delay(5000);
   gear_2();
-  delay(1000);
+  delay(5000);
   gear_3();
-  delay(1000);
+  delay(5000);
 }
 
 void gear_1() {
