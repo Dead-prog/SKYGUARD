@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Mokxi: Push to Mokxi",
+      "type": "shell",
+      "command": "npx --yes @mokxi/cli push",
+      "problemMatcher": []
+    },
+    {
+      "label": "Mokxi: Pull from Mokxi",
+      "type": "shell",
+      "command": "npx --yes @mokxi/cli pull",
+      "problemMatcher": []
+    },
+    {
+      "label": "Mokxi: Run in the simulator",
+      "type": "shell",
+      "command": "npx --yes @mokxi/cli run --seconds 5",
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Mokxi: Open in the browser",
+      "type": "shell",
+      "command": "npx --yes @mokxi/cli open",
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino: Compile (esp32s31)",
+      "type": "shell",
+      "command": "arduino-cli compile --fqbn esp32:esp32:esp32s3 --output-dir build/Line_following_cart_esp32s31 Line_following_cart_esp32s31",
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Mokxi: Upload the build to Mokxi (esp32s31)",
+      "type": "shell",
+      "command": "npx --yes @mokxi/cli upload --board esp32s31 --firmware build/Line_following_cart_esp32s31/Line_following_cart_esp32s31.ino.elf",
+      "dependsOn": "Arduino: Compile (esp32s31)",
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino: Upload to a real board (esp32s31)",
+      "type": "shell",
+      "command": "arduino-cli upload --fqbn esp32:esp32:esp32s3 --input-dir build/Line_following_cart_esp32s31 --port ${input:port} Line_following_cart_esp32s31",
+      "dependsOn": "Arduino: Compile (esp32s31)",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "port",
+      "type": "promptString",
+      "description": "Serial port of the board (arduino-cli board list shows them)",
+      "default": "/dev/ttyUSB0"
+    }
+  ]
+}
