@@ -1,6 +1,6 @@
 DC Motor Control Simulation
 
-I used Mokxi to simulate DC motor control with an Arduino, a transistor, and a 3.7 V battery. My goal was to understand PWM control before working with the 8520 motors for my SKYGUARD drone.
+I used Mokxi to simulate DC motor control with an ESP32-S3, a transistor, resistor, and a 3.7 V battery. My goal was to understand PWM control before working with the 8520 motors for my SKYGUARD drone.
 
 I successfully controlled my motor speed using three levels: 100/255, 200/255, and 255/255 (details in the code).
 
