@@ -1,1 +1,7 @@
+After learning how to control one motor, my next goal was to control all four motors of my quadcopter.
 
+I managed to get it working, but it wasn't easy. I had to figure out how to manage the power for all four motors
+and build the circuit. The hardest part was understanding how to connect the transistors.
+I used 2N2222 transistors, which Mokxi recommended for my motors.
+
+It was challenging, but I learned a lot about motor control and circuit design along the way!
