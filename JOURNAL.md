@@ -1,8 +1,11 @@
 ---
  
 title: "SKYGUARD: VTOL SWARM"
+
 author: "DeadProg"
+
 description: "Developing a swarm of VTOL drones to help rescue teams locate people in danger."
+
 created_at: "2026-10-25"
 
 Phase 1: First drone prototype
